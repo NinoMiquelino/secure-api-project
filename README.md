@@ -99,11 +99,9 @@ php -S localhost:8080
 
 4 - Acessar o Front-end
 
+```bash
 ​Abra a página do cliente no seu navegador:
 ​🔗 URL de Acesso: http://localhost/secure-api-php-js-jwt/client/index.html (ou http://localhost:8080/client/index.html se usar o servidor embutido).
-
-```bash
-
 ```
 
 ### Seções "Credenciais de Teste" e "Fluxo de Segurança"
