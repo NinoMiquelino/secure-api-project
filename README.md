@@ -12,10 +12,9 @@
 
 # 🔐 API-Segura-JWT-com-PHP-e-VanillaJS
 
-![PHP](https://img.shields.io/badge/PHP-8.0+-777BB4.svg?style=for-the-badge&logo=php&logoColor=white)
-![PHPMailer](https://img.shields.io/badge/PHPMailer-SMTP-6B46C1.svg?style=for-the-badge)
-![JavaScript](https://img.shields.io/badge/JavaScript-ES6+-yellow.svg)
-![Tailwind CSS](https://img.shields.io/badge/Tailwind-CSS-38B2AC.svg)
+[![PHP](https://img.shields.io/badge/PHP-8.0%2B-777BB4?logo=php&logoColor=white)](https://www.php.net/)
+[![JavaScript](https://img.shields.io/badge/JavaScript-ES6%2B-F7DF1E?logo=javascript&logoColor=black)](https://developer.mozilla.org/javascript)
+[![Tailwind CSS](https://img.shields.io/badge/Tailwind-CSS-38B2AC?logo=tailwind-css&logoColor=white)](https://tailwindcss.com/)
 ![License MIT](https://img.shields.io/badge/License-MIT-green)
 ![Status Stable](https://img.shields.io/badge/Status-Stable-success)
 ![Version 1.0.0](https://img.shields.io/badge/Version-1.0.0-blue)
@@ -106,7 +105,6 @@ php -S localhost:8080
 
 ### Seções "Credenciais de Teste" e "Fluxo de Segurança"
 
-```markdown
 ## 🔑 Credenciais de Teste
 
 Use estas credenciais para testar o fluxo de autenticação na tela de login:
