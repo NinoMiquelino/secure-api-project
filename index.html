@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Plataforma Visual - Login Seguro JWT</title>
+        <meta name="author" content="Onivaldo Miquelino">  
+    <script src="https://cdn.tailwindcss.com"></script>
+    
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        'primary': '#1e40af', // Blue 700
+                        'secondary': '#f97316', // Orange 500
+                    }
+                }
+            }
+        }
+    </script>
+</head>
+<body class="bg-gray-100 flex items-center justify-center min-h-screen p-4">
+
+    <div class="w-full max-w-lg bg-white shadow-2xl rounded-xl p-8 space-y-6">
+        
+        <h1 class="text-3xl font-bold text-center text-primary flex items-center justify-center space-x-2">
+            <i class="fas fa-lock text-secondary"></i>
+            <span>Dashboard Corporativo</span>
+        </h1>
+
+        <p id="login-message" class="text-center font-medium text-sm h-5"></p>
+
+        <div id="login-area" class="space-y-4">
+            <h2 class="text-xl font-semibold text-gray-700 border-b pb-2 mb-4">Acesso Restrito</h2>
+            
+            <form id="login-form" class="space-y-4">
+                <div>
+                    <label for="username" class="block text-sm font-medium text-gray-700">Usuário:</label>
+                    <div class="mt-1 relative rounded-md shadow-sm">
+                        <div class="absolute inset-y-0 left-0 pl-3 flex items-center pointer-events-none">
+                            <i class="fas fa-user text-gray-400"></i>
+                        </div>
+                        <input type="text" id="username" placeholder="admin" required 
+                               class="focus:ring-secondary focus:border-secondary block w-full pl-10 pr-3 py-2 border border-gray-300 rounded-md"
+                               value="admin">
+                    </div>
+                </div>
+                
+                <div>
+                    <label for="password" class="block text-sm font-medium text-gray-700">Senha:</label>
+                    <div class="mt-1 relative rounded-md shadow-sm">
+                        <div class="absolute inset-y-0 left-0 pl-3 flex items-center pointer-events-none">
+                            <i class="fas fa-key text-gray-400"></i>
+                        </div>
+                        <input type="password" id="password" placeholder="senha123" required
+                               class="focus:ring-secondary focus:border-secondary block w-full pl-10 pr-3 py-2 border border-gray-300 rounded-md"
+                               value="senha123">
+                    </div>
+                </div>
+                
+                <button type="submit" class="w-full flex justify-center py-2 px-4 border border-transparent rounded-md shadow-sm text-sm font-medium text-white bg-primary hover:bg-blue-800 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-primary transition duration-150">
+                    <i class="fas fa-sign-in-alt mr-2 mt-0.5"></i>
+                    Entrar na Plataforma
+                </button>
+            </form>
+        </div>
+
+        <div id="dashboard-area" class="space-y-4 hidden">
+            <h2 class="text-xl font-semibold text-gray-700 border-b pb-2 mb-4 flex justify-between items-center">
+                <span><i class="fas fa-chart-line mr-2 text-secondary"></i> Dados Protegidos</span>
+                <button id="logout-btn" class="text-xs text-red-600 hover:text-red-800 font-medium">
+                    <i class="fas fa-sign-out-alt mr-1"></i> Sair
+                </button>
+            </h2>
+
+            <p class="text-sm text-gray-600">
+                Seu token JWT é válido! Abaixo estão os dados sensíveis recuperados da API:
+            </p>
+            
+            <button id="fetch-data-btn" class="w-full py-2 px-4 border border-transparent rounded-md shadow-sm text-sm font-medium text-white bg-green-600 hover:bg-green-700 transition duration-150">
+                <i class="fas fa-sync-alt mr-2"></i> Atualizar Dados
+            </button>
+            
+            <pre id="corporate-data-output" class="bg-gray-50 border border-gray-200 p-4 rounded-lg text-sm overflow-x-auto whitespace-pre-wrap break-all h-40"></pre>
+        </div>
+
+    </div>
+
+    <script src="app.js"></script>
+</body>
+</html>
